@@ -14,3 +14,20 @@ of [Piwigo](https://piwigo.org/).
 ## Installation
 
     composer require --dev samwilson/piwigo-coding-standards
+
+## Usage
+
+Create a `.phpcs.xml` file such as the following:
+
+```xml
+<?xml version="1.0"?>
+<ruleset>
+    <rule ref="vendor/samwilson/piwigo-coding-standards/Piwigo/ruleset.xml" />
+    <file>.</file>
+    <exclude-pattern>./vendor</exclude-pattern>
+</ruleset>
+```
+
+Then run:
+
+    ./vendor/bin/phpcs
